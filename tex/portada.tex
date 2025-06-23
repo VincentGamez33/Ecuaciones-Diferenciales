@@ -1,0 +1,40 @@
+\pagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+    \coordinate (A) at ($(current page.west)!0.21!(current page.north west)!0.15!(current page.north)$);
+    \coordinate (B) at ($(current page.east)!0.21!(current page.north east)$);
+     
+    \fill[mainc1!20!gray] (current page.north west) rectangle (current page.south east);
+
+    \node at (current page.center) {\includegraphics[width=1.005\paperwidth]{images/portada/portada.pdf}};
+
+    \node[font=\fontsize{20}{20}\selectfont\color{white},opacity=0.25] at ($(current page.center)+(0,-0.14\paperheight)$)
+        {$x' = \sigma (y - x), \quad y' = x(\rho - z) - y, \quad z' = xy - \beta z$};
+
+    \fill[black!60,opacity=0.5] (A) rectangle ($(B)+(0,-0.23\paperheight)$);
+
+    \begin{scope}[font=\selectfont\color{black!80}\TrajanProB\fontsize{52}{52}\selectfont]
+        \node[anchor=west,right] (s1) at ($(A)+(0.6,-1.675)$) {\MakeUppercase{Ecuaciones}};
+        \node[anchor=north west] (s2) at ($(s1.south west)+(0,-0.6)$) {\MakeUppercase{Diferenciales}};
+
+        \node[anchor=north west] (s3) at ($(s2.south west)+(-0.05,-1.05)$) {\fontsize{30}{30}\selectfont\MakeUppercase{Un Enfoque Moderno}};
+
+        \node[anchor=north west] (s4) at ($(A)+(0.05,-0.58\paperheight-0.05)$) {\creato\fontsize{19}{30}\selectfont Joshua Mijangos López $\bullet$ Vicente C Gámez};
+
+        \node[anchor=north west] (s5) at ($(s3.south west)+(0.05,-0.3)$) {\superior\fontsize{20}{20}\selectfont Primera Edición};
+    \end{scope}
+
+    \begin{scope}[font=\selectfont\color{white}\TrajanProB\fontsize{52}{52}\selectfont]
+        \node[anchor=north west] at ($(s1.north west)+(-0.1,0.1)$) {\MakeUppercase{Ecuaciones}};
+        \node[anchor=north west] (w2) at ($(s2.north west)+(-0.1,0.1)$) {\MakeUppercase{Diferenciales}};
+
+        \node[anchor=north west] at ($(s3.north west)+(-0.05,0.05)$) {\fontsize{30}{30}\selectfont\MakeUppercase{Un Enfoque Moderno}};
+
+        \node[anchor=north west] at ($(s4.north west)+(-0.05,0.05)$) {\creato\fontsize{19}{30}\selectfont Joshua Mijangos López $\bullet$ Vicente C Gámez};
+
+        \node[anchor=north west] at ($(s5.north west)+(-0.05,0.05)$) {\superior\fontsize{20}{20}\selectfont Primera Edición};
+    \end{scope}
+
+    \draw[white,line width=0.6mm] ($(w2.south west)+(0,-0.5)$) -- ++(0.62\paperwidth,0);
+\end{tikzpicture}
+
+\cleardoublepage
